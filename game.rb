@@ -1,8 +1,6 @@
-require "./player"
 class Game
 
-  def initialize(game)
-    @game = game
+  def initialize
     @Player1 = Player.new("Player 1")
     @Player2 = Player.new("Player 2")
   end
@@ -27,8 +25,8 @@ class Game
     puts "#{name.name} wins with a score of #{name.lives}/3"
     puts "----- GAME OVER -----"
     puts "Good bye!"
+    exit
   end
-
 
   def scores
     if @Player1.is_loser?
